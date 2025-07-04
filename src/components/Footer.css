@@ -1,0 +1,231 @@
+.footer {
+  margin-top: 200px;
+  width: 100%;
+  background-color: rgba(0, 41, 49, 1); /* Dark teal background from the image */
+  color: #fff;
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* New logo container to hold image and text horizontally */
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Updated logo icon to display image */
+.footer-text {
+  margin-left: -200px;
+  text-align: left;
+  max-width: 500px;
+  margin-right: 20px;
+}
+
+.footer-logo-icon img {
+  width: 458px;
+  height: 307px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: -220px; /* Adjusted to align with text */
+}
+
+/* Alternative: If you want the logo without circular background */
+.footer-logo-icon.no-background {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+}
+
+.footer-logo h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2bd2c4;
+  margin: 0;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.footer-contact svg {
+  color: #2bd2c4;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
+  gap: 20px;
+}
+
+.footer-description p {
+  font-size: 20px;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2bd2c4;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #2bd2c4;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #2bd2c4; /* Teal line */
+  margin-top: 20px;
+}
+
+
+.footer-social h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.social-icons a {
+  color:rgba(0, 41, 49, 1); /* White icon color */
+  background-color: #7a7a7a; /* White circle background */
+  border-radius: 50%;
+  padding: 10px; /* Reduced padding to center icons */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon horizontally and vertically */
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  font-size: 2.5rem; /* Adjusted size to fit within the circle */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(43, 210, 196, 0.5); /* Subtle glow effect */
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  color: #999;
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-logo-container {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 0 10px;
+  }
+
+  .footer-logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-logo h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-column h4 {
+    font-size: 1rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.8rem;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    padding: 8px;
+  }
+}

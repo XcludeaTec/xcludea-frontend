@@ -1,0 +1,470 @@
+body {
+    background: linear-gradient(90deg, #fff 80%, #b2f1f6 100%);
+  }
+  
+  .careers-container {
+    max-width: 100%;
+    margin: -18px auto;
+    padding: 40px 1;
+    font-family: 'Poppins', Arial, sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .careers-hero {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  
+  .careers-title {
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    text-shadow: 0 2px 6px rgb(87, 87, 87), 0 1px 2px #0001;
+  }
+  
+  .careers-title .accent {
+    color: #3de6e0;
+  }
+  .careers-title .black {
+    color: #111;
+  }
+  
+  /* Letter animation styles */
+  .careers-title .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+
+  .careers-title.animated .letter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .careers-title.animated .letter:nth-child(1) { transition-delay: 0.1s; }
+  .careers-title.animated .letter:nth-child(2) { transition-delay: 0.2s; }
+  .careers-title.animated .letter:nth-child(3) { transition-delay: 0.3s; }
+  .careers-title.animated .letter:nth-child(4) { transition-delay: 0.4s; }
+  .careers-title.animated .letter:nth-child(5) { transition-delay: 0.5s; }
+  .careers-title.animated .letter:nth-child(6) { transition-delay: 0.6s; }
+  .careers-title.animated .letter:nth-child(7) { transition-delay: 0.7s; }
+  
+  .careers-subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease 0.8s;
+  }
+
+  .careers-title.animated + .careers-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .open-positions-btn {
+    background: #fff;
+    color: #222;
+    border: 5px solid #3de6e0;
+    border-radius: 24px;
+    padding: 10px 32px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(122, 120, 120, 0.541);
+    transition: all 0.3s ease;
+    margin-bottom: 18px;
+    opacity: 0;
+    width: 250px;
+    transform: translateY(20px);
+  }
+
+  .careers-title.animated ~ .open-positions-btn {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+  }
+
+  .open-positions-btn:hover {
+    background: #3de6e0;
+    border: 5px solid #707070;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(61, 230, 224, 0.3);
+  }
+  
+  .mouse-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 0;
+    height: 36px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease 1.2s;
+  }
+
+  .careers-title.animated ~ .mouse-icon-wrapper {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mouse-icon {
+    color: #444;
+    opacity: 0.7;
+    animation: mouse-bounce 1.5s infinite;
+  }
+  @keyframes mouse-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  
+  .careers-why {
+    background: linear-gradient(90deg, #fff 60%, #e6fafa 100%);
+    border-radius: 18px;
+    padding: 36px 24px 32px 24px;
+    box-shadow: 0 2px 16px #0001;
+    margin: 2px auto;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    width: 1200px;
+    
+  }
+
+  .careers-why.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .why-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .why-title .accent {
+    color: #3de6e0;
+  }
+  
+  .why-desc {
+    text-align: center;
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 32px;
+  }
+  
+  .features-bg-illustration {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: 0;
+    opacity: 0;
+    width: 90%;
+    max-width: 420px;
+    pointer-events: none;
+    transition: all 1s ease 0.5s;
+  }
+
+  .features-bg-illustration.visible {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .features-bg-illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease;
+  }
+
+  .careers-why.visible .feature-item {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .careers-why.visible .feature-item:nth-child(1) { transition-delay: 0.2s; }
+  .careers-why.visible .feature-item:nth-child(2) { transition-delay: 0.4s; }
+  .careers-why.visible .feature-item:nth-child(3) { transition-delay: 0.6s; }
+  .careers-why.visible .feature-item:nth-child(4) { transition-delay: 0.8s; }
+  .careers-why.visible .feature-item:nth-child(5) { transition-delay: 1s; }
+  
+  .feature-number {
+    min-width: 38px;
+    min-height: 38px;
+    background: #3de6e0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px #0001;
+    margin-top: 2px;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .feature-desc {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 2px;
+  }
+  
+  @media (max-width: 600px) {
+    .careers-container {
+      padding: 18px 4px;
+    }
+    .careers-title {
+      font-size: 2.1rem;
+    }
+    .why-title {
+      font-size: 1.2rem;
+    }
+    .careers-why {
+      padding: 18px 6px 18px 6px;
+    }
+    .feature-title {
+      font-size: 1rem;
+    }
+    .features-bg-illustration {
+      max-width: 250px;
+    }
+  }
+  
+  .benefits-section {
+    margin: 64px 0 0 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+
+  .benefits-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .benefits-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 8px #0001;
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px 64px;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .benefit-card {
+    border: 10px solid rgba(152, 255, 246, 0.18); /* Subtle border for glass effect */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 32px #b2f1f633;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    opacity: 0;
+    transform: scale(0.95);
+    margin: 0 0;
+    padding: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    color: #ffffff; /* White text for contrast against blurred background */
+    opacity: 0;
+    transform: scale(1) translateX(0);
+    transition: opacity 1.8s cubic-bezier(0.23, 1, 0.32, 1), transform 1.8s cubic-bezier(0.23, 1, 0.32, 1);
+  
+  }
+
+
+  .benefit-card.animated {
+    opacity: 1;
+    transform: scale(1);
+    animation: none;
+  }
+
+  .benefit-card:hover {
+    box-shadow: 0 8px 40px #3de6e033;
+    transform: scale(1.04);
+  }
+
+  .benefit-icon {
+    font-size: 2.8rem;
+    color: #888;
+    margin-bottom: 18px;
+  }
+
+  .benefit-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #22cfd0;
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+
+  .benefit-desc {
+    font-size: 1rem;
+    color: #222;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  @media (max-width: 700px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .benefit-card {
+      width: 180px;
+      height: 180px;
+      padding: 0;
+    }
+    .benefit-icon {
+      font-size: 1.6rem;
+    }
+    .benefit-title {
+      font-size: 1rem;
+    }
+    .benefit-desc {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .apply-section {
+    margin: 64px 0 0 0;
+    text-align: center;
+  }
+  
+  .apply-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px #0001;
+  }
+  
+  .apply-title .accent {
+    color: #3de6e0;
+  }
+  
+  .apply-subheading {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 32px;
+  }
+  
+  .apply-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .apply-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px #0001;
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+  
+  .apply-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(61, 230, 224, 0.1);
+  }
+  
+  .apply-job-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  .apply-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .apply-meta-item {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .apply-btn {
+    background: #3de6e0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background: #2bc4be;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 700px) {
+    .apply-list {
+      gap: 16px;
+    }
+    .apply-card {
+      padding: 16px;
+    }
+    .apply-btn {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+    .apply-title {
+      font-size: 2rem;
+    }
+  }
+  
